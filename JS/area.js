@@ -61,7 +61,7 @@ document.getElementById('ellipse-button').addEventListener('click', function(){
         document.getElementById('ellipse-height').value = '';
         return;
     }
-    result = 3.14 * base * height;
+    result = toFixed(3.14 * base * height);
     setElementText('parallelogram-result',result)
 })
 
