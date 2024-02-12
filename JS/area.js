@@ -21,7 +21,7 @@ document.getElementById('triangle-button').addEventListener('click', function(){
         document.getElementById('triangle-height').value = '';
         return;
     }
-    result = 0.5 * base * height;
+    const result = 0.5 * base * height;
     setElementText("triangle-result", result)
 })
 
@@ -35,7 +35,7 @@ document.getElementById('ractangle-button').addEventListener('click', function()
         document.getElementById('ractangle-length').value = '';
         return;
     }
-    result = width * length;
+    const result = width * length;
     setElementText('ractangle-result',result);
 })
 // parallelogram 
@@ -48,20 +48,21 @@ document.getElementById('parallelogram-button').addEventListener('click', functi
         document.getElementById('parallelogram-height').value = '';
         return;
     }
-    result = base * height;
+    const result = base * height;
     setElementText('parallelogram-result',result)
 })
 // ellipse 
 document.getElementById('ellipse-button').addEventListener('click', function(){
-    const  base = inputFieldValue('ellipse-base');
-    const  height = inputFieldValue('ellipse-height');
-    if(isNaN(base) || isNaN(height)){
+    const  A = inputFieldValue('ellipse-base');
+    const  B = inputFieldValue('ellipse-height');
+    if(isNaN(A) || isNaN(B)){
         alert('please Provided valid number');
         document.getElementById('ellipse-base').value = '';
         document.getElementById('ellipse-height').value = '';
         return;
     }
-    result = toFixed(3.14 * base * height);
-    setElementText('parallelogram-result',result)
+    const result = (3.14 * A * B).toFixed(2);
+    
+    setElementText('ellipse-result',result)
 })
 
